@@ -3,6 +3,7 @@ import { Box, Container, Stack } from '@mui/system';
 import React, { useState } from 'react';
 import '../css/App.css';
 import '../css/navbar.css';
+import '../css/footer.css';
 
 import {
   BrowserRouter as Router,
@@ -21,6 +22,7 @@ import { Homepage } from './screens/Homepage';
 import { NavbarHome } from './components/header';
 import { NavbarRestaurant } from './components/header/restaurant';
 import { NavbarOthers } from './components/header/others';
+import { Footer } from './components/footer';
 
 function App() {
   const [path,setPath] = useState();
@@ -37,34 +39,7 @@ function App() {
       )}
 
         
-        {/*<nav>
-          <ul>
-            <li>
-              <Link to="/restaurant">RestaurantPage</Link>
-            </li>
-            <li>
-              <Link to="/community">CommunityPage</Link>
-            </li>
-            <li>
-              <Link to="/orders">OrdersPage</Link>
-            </li>
-            <li>
-              <Link to="/members-page">MemberPage</Link>
-            </li>
-            <li>
-              <Link to="/help">HelpPage</Link>
-            </li>
-            <li>
-              <Link to="/login">LoginPage</Link>
-            </li>
-            <li>
-              <Link to="/">Homepage</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
+        
         <Switch>
           <Route path="/restaurant">
             <RestaurantPage />
@@ -88,6 +63,9 @@ function App() {
             <Homepage />
           </Route>
         </Switch>
+        
+
+        <Footer/>
       
     </Router>
   );
